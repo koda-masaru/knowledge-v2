@@ -1,0 +1,113 @@
+version: '2.1'
+
+services:
+  maven:
+    image: knowledge-dev
+    env_file: .env
+    build:
+      context: ./backend
+      args:
+        - https_proxy
+        - http_proxy
+    command: mvn -v
+    environment:
+      KNOWLEDGE_TEST_MAIL: 'false'
+      KNOWLEDGE_UNIT_TEST_WAIT_MILL: 10
+      MAVEN_CONFIG: /var/maven/.m2
+      https_proxy: ${https_proxy}
+      http_proxy: ${http_proxy}
+    working_dir: /usr/src/mymaven/
+    entrypoint: ''
+    volumes:
+      - $PWD/backend:/usr/src/mymaven:cached
+      - ${APPLICATION_HOME}.m2:/root/.m2:cached
+
+  tomcat:
+    image: tomcat:8.5-jre8-alpine
+    env_file: .env
+    ports:
+      - 8080:8080
+      - 8009:8009
+    expose:
+      - 8080
+    command: bash -c "rm -rf /usr/local/tomcat/webapps/ROOT && catalina.sh run" 
+#    links:
+#      - mailcatcher
+#      - postgres
+#      - elasticsearch
+#      - kibana
+    environment:
+      https_proxy: ${https_proxy}
+      http_proxy: ${http_proxy}
+    volumes:
+      - ${APPLICATION_HOME}.knowledge:/root/.knowledge:cached
+      - $PWD/backend/target/knowledge.war:/usr/local/tomcat/webapps/ROOT.war
+
+  frontend:
+    image: node:8.10.0
+    env_file: .env
+    environment:
+      - https_proxy:${https_proxy}
+      - http_proxy:${http_proxy}
+    command: npm run dev
+    ports:
+      - 8081:8081
+    working_dir: "/usr/src"
+    volumes:
+      - $PWD/frontend:/usr/src:cached
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - $PWD/dev/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  mailcatcher:
+    image: zolweb/docker-mailcatcher
+    ports:
+      - 1025:1025
+      - 1080:1080
+    expose:
+      - 1080
+
+  postgres:
+    image: postgres:9.6.5
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: '1qazxsw2'
+    volumes:
+      - ${APPLICATION_HOME}.postgres:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: elasticsearch:5.5.2-alpine
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      transport.host: '0.0.0.0'
+      discovery.zen.minimum_master_nodes: '1'
+      xpack.security.enabled: 'false'
+      xpack.monitoring.enabled: 'true'
+      xpack.watcher.enabled: 'false'
+      xpack.graph.enabled: 'false'
+      xpack.monitoring.history.duration: '1d'
+      ES_JAVA_OPTS: '-Xms512m -Xmx512m'
+    volumes:
+      - ${APPLICATION_HOME}.es_data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: kibana:5.5.2
+    links:
+      - elasticsearch
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: 'http://elasticsearch:9200'
+      XPACK_MONITORING_ELASTICSEARCH_URL: 'http://elasticsearch:9200'
+      XPACK_SECURITY_ENABLED: 'false'
+

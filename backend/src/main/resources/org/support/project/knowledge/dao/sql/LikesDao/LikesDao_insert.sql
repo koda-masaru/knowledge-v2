@@ -1,0 +1,20 @@
+INSERT INTO LIKES
+( 
+NO
+ , KNOWLEDGE_ID
+ , LIKE_CLASS
+ , INSERT_USER
+ , INSERT_DATETIME
+ , UPDATE_USER
+ , UPDATE_DATETIME
+ , DELETE_FLAG
+) VALUES (
+DEFAULT
+ , ?
+ , ?
+ , ?
+ , ?
+ , ?
+ , ?
+ , ?
+);

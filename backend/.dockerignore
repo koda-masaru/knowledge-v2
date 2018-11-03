@@ -1,0 +1,16 @@
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+.git/
+.gitignore/
+
+target/
+
+tomcat.8080/
+
+.idea/
+.postgres/
+.settings/
+.es_data/
+

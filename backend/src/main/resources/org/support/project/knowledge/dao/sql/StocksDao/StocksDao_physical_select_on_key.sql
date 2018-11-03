@@ -1,0 +1,4 @@
+SELECT * FROM STOCKS
+ WHERE 
+STOCK_ID = ?
+;

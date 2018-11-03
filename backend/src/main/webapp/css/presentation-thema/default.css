@@ -1,0 +1,96 @@
+/* .markdownSlide span, .markdownSlide code, .markdownSlide pre, */
+.markdownSlide div, .markdownSlide object, .markdownSlide iframe,
+.markdownSlide h1, .markdownSlide h2, .markdownSlide h3, .markdownSlide h4, .markdownSlide h5,
+.markdownSlide h6, .markdownSlide p, .markdownSlide blockquote,
+.markdownSlide abbr, .markdownSlide address, .markdownSlide cite,
+.markdownSlide del, .markdownSlide dfn, .markdownSlide em, .markdownSlide img, .markdownSlide ins,
+.markdownSlide kbd, .markdownSlide q, .markdownSlide samp,
+.markdownSlide small, .markdownSlide strong, .markdownSlide sub, .markdownSlide sup, .markdownSlide var,
+.markdownSlide b, .markdownSlide i,
+.markdownSlide dl, .markdownSlide dt, .markdownSlide dd, .markdownSlide ol, .markdownSlide ul, .markdownSlide li,
+.markdownSlide fieldset, .markdownSlide form, .markdownSlide label, .markdownSlide legend,
+.markdownSlide table, .markdownSlide caption, .markdownSlide tbody, .markdownSlide tfoot, .markdownSlide thead,
+.markdownSlide tr, .markdownSlide th, .markdownSlide td,
+.markdownSlide article, .markdownSlide aside, .markdownSlide canvas, .markdownSlide details, .markdownSlide figcaption,
+.markdownSlide figure, .markdownSlide 
+.markdownSlide footer, .markdownSlide header, .markdownSlide hgroup, .markdownSlide menu, .markdownSlide nav,
+.markdownSlide section, .markdownSlide summary,
+.markdownSlide time, .markdownSlide mark, .markdownSlide audio, .markdownSlide video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    color: black;
+}
+
+.markdownSlide a, .markdownSlide a:hover, .markdownSlide a:visited, .markdownSlide a:focus {
+    color: black;
+}
+.markdownSlide pre {
+    margin: 1vh;
+    padding: 0.2vh;
+}
+
+.markdownSlide {
+    background-color: white;
+    overflow: hidden;
+    padding: 3vh;
+    position: relative;
+}
+
+.markdownSlide ul, .markdownSlide ol {
+    padding-left: 3vh;
+}
+
+.markdownSlide p, 
+.markdownSlide h1, 
+.markdownSlide h2, 
+.markdownSlide h3, 
+.markdownSlide h4 {
+    margin-top: 0px;
+    margin-bottom: 1vh;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.markdownSlide h1 {
+    font-size: 8vh;
+    line-height: 10vh;
+    border-bottom: 0.2vh solid gray;
+}
+.markdownSlide h2 {
+    font-size: 4vh;
+    line-height: 5vh;
+    border-bottom: 0.2vh dotted gray;
+}
+.markdownSlide h3 {
+    font-size: 2.5vh;
+    line-height: 4vh;
+}
+.markdownSlide h4 {
+    font-size: 2.5vh;
+    line-height: 4vh;
+}
+.markdownSlide p, .markdownSlide li, .markdownSlide pre, .markdownSlide code, .markdownSlide span {
+    font-size: 2.5vh;
+}
+.markdownSlide p, .markdownSlide li {
+    line-height: 4vh;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    width: 90%;
+}
+.centered h1,
+.centered h2 {
+    border: none;
+}
+
+

@@ -1,0 +1,156 @@
+{
+  "Route": {
+    "ArticleCreate": "Create",
+    "ArticleList": "Articles",
+    "ArticleDetail": "Article",
+    "ArticleEdit": "Edit Article",
+    "ArticleSearch": "Search",
+    "DraftList": "Drafts",
+    "DraftEdit": "Edit Article",
+    "MyArticleList": "My Articles",
+    "StockList": "Stocks",
+    "StockArticles": "Stock",
+    "StockAdd": "Add Stock",
+    "Config": "Config",
+    "ConfigLocalize": "Localize",
+    "MoveOldUI": "Change to OLD UI",
+    "TestViewTitle": "Page of Test",
+    "TestViewDescription": "This page is test of frontend development"
+  },
+  "Label": {
+    "Create": "Create",
+    "Update": "Update",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "Save": "Save",
+    "Release": "Release",
+    "Show": "Show",
+    "Hide": "Hide",
+    "Empty": "Empty",
+    "Close": "Close",
+    "Add": "Add",
+    "Back": "Back"
+  },
+  "Message": {
+    "NotFound": "Not found"
+  },
+  "Article": {
+    "PublicFlag": {
+      "0": "Public",
+      "1": "Private",
+      "2": "Protect"
+    }
+  },
+  "EmojiPicker": {
+    "Emoji": "Emoji"
+  },
+  "Login": {
+    "BtnSubmit": "Submit",
+    "BtnCancel": "Cancel"
+  },
+  "DashView": {
+    "about": "About",
+    "manual": "Manual",
+    "licence": "Licence"
+  },
+  "ArticleList": {
+    "description": "List of articles",
+    "Message": "message"
+  },
+  "MyArticleList": {
+    "description": "My Articles"
+  },
+  "ArticleDetail": {
+    "description": "Detail of a article",
+    "BtnLike": "Like",
+    "BtnStock": "Stock this article",
+    "BtnEdit": "Edit this article",
+    "BtnToc": "Toggle table of contents",
+    "ExistDraft": "[Exists Draft]"
+  },
+  "ArticleDetailSidebar": {
+    "TocTitle": "Table of contents"
+  },
+  "ArticleDetailComments": {
+    "DisplayHidden": "Hided this comment",
+    "NotYetBeenRegistered": "Not yet been registered"
+  },
+  "ArticleCreate": {
+    "description": "Create a new article"
+  },
+  "ArticleEdit": {
+    "description": "Edit this article",
+    "BtnRelease": "Release this article",
+    "BtnDraft": "Save this article as draft",
+    "BtnAttributes": "Toggle display attribute",
+    "BtnCancel": "Cancel edit",
+    "BtnRemove": "Remove this article",
+    "ExistDraft": "[Exists Draft]",
+    "DeleteDraft": "Delete the draft"
+  },
+  "ArticleSearch": {
+    "description": "Article search",
+    "SearchCondition": "SearchCondition",
+    "Keyword": "Keyword",
+    "Types": "Types",
+    "Tags": "Tags"
+  },
+  "DraftList": {
+    "description": "List of draft",
+    "EmptyTitle": "Title is empty"
+  },
+  "TargetSelectDialog": {
+    "Title": "Select group/user"
+  },
+  "TagSelectDialog": {
+    "Title": "Select tags"
+  },
+  "LikesModal": {
+    "Title": "Liked by",
+    "Name": "User",
+    "InsertedAt": "Pushed at"
+  },
+  "DraftEdit": {
+    "description": "Edit this article"
+  },
+  "Stock": {
+    "Name": "Name",
+    "Description": "Description",
+    "Placeholder": {
+      "Name": "",
+      "Description": ""
+    }
+  },
+  "StockList": {
+    "description": "Stocks",
+    "Name": "Stock name",
+    "Note": "Note",
+    "Count": "Article count"
+  },
+  "StockArticles": {
+    "description": "Stock information and articles in this stock",
+    "ArticleTitle": "Title of Article",
+    "Comment": "Comment",
+    "DateTime": "Saved at"
+  },
+  "StockAdd": {
+    "description": "Add your stock"
+  },
+  "StockSelectModal": {
+    "Title": "Select stock",
+    "Stocked": "ON/OFF",
+    "StockName": "Stock name",
+    "Comment": "Comment"
+  },
+  "Config": {
+    "description": "Config"
+  },
+  "ConfigLocalize": {
+    "description": "Localize",
+    "Language": "Display Language",
+    "English": "English",
+    "Japanese": "Japanese",
+    "Timezone": "Timezone",
+    "Edit": "Edit"
+  }
+}

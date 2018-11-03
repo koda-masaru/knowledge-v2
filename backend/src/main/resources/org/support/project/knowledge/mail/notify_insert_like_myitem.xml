@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mail>
+<title>[Knowledge] "Like" increased {KnowledgeId} - {KnowledgeTitle}</title>
+<contents xml:space="preserve">
+"Like" has been increased.
+
+{URL}
+
+------------------------------------------
+Title: {KnowledgeTitle}
+
+------------------------------------------
+{Contents}
+
+------------------------------------------
+ This e-mail has been sent automatically from the system.
+ Please understand that it can not reply to this email.
+</contents>
+
+<templateTitle>Like notification</templateTitle>
+<description>
+System will notify me when "Like" is pressed on my post.
+
+[Reserved keywords]
+If you write the following keywords in the body, replace the value when sending mail.
+
+- {URL} : URL of Target data
+- {KnowledgeId} : ID
+- {KnowledgeTitle} : Title
+- {Contents} : Content of article
+</description>
+</mail>
+
+
